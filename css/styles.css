@@ -1,0 +1,35 @@
+/*#show-contact {
+  display: none;
+}
+
+.contacts {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+.contacts:hover {
+  text-decoration: underline;
+}*/
+
+select {
+  font-size: 2em;
+}
+.selections {
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  width: 100%;
+  padding: 20px;
+}
+
+#movieChoice {
+  margin: 13px;
+}
+
+body {
+    color: White;
+    background-image: url("../movie.jpg");
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
