@@ -1,8 +1,8 @@
-/*#show-contact {
+.view {
   display: none;
 }
 
-.contacts {
+/*.contacts {
   cursor: pointer;
   color: #0088cc;
 }
