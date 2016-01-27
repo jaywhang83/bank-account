@@ -33,3 +33,8 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.jumbotron {
+  /*display: none;*/
+  background-color: grey;
+}

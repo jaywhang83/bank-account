@@ -3,12 +3,12 @@ function BankAccount(accountName, initialDeposit) {
   this.initialDeposit = initialDeposit;
 };
 
-BankAccount.prototype.deposit = function(deposit) {
-  this.initialDeposit += deposit;
+BankAccount.prototype.deposit = function(inputDeposit) {
+  return inputDeposit + parseInt(this.initialDeposit);
 };
 
 BankAccount.prototype.withdraw = function(withdrawAmount) {
-  this.initialDeposit -= withdrawAmount;
+  return  parseInt(this.initialDeposit) - withdrawAmount;
 };
 
 
@@ -21,7 +21,22 @@ $(document).ready(function(){
 
     var newAccount = new BankAccount(accountName, initialDeposit);
     $(".view").show();
-    $(".result").text("Your name is: " + newAccount.accountName + "And your account balance is: " + newAccount.initialDeposit);
+    $(".result").text("Your name is: " + newAccount.accountName + " and your account balance is: $" + newAccount.initialDeposit);
 
+    $("form#depositWithdrawal").click(function() {
+
+      var inputDeposit = parseInt($("input#deposit").val());
+      var withdrawal = parseInt($("input#withdrawal").val());
+      // var accountBalance = new BankAccount(accountName, initialDeposit);
+      // $(".view").show();
+      console.log(withdrawal);
+      if (!withdrawal) {
+        $(".balance").text(newAccount.deposit(inputDeposit));
+      }
+      else {
+        $(".balance").text(newAccount.withdraw(withdrawal));
+      }
+
+    });
   });
 });
